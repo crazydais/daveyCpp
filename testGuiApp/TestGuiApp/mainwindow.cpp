@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent) :
     */
 
     //  Call 'on_pushButton_generate_clicked()' to generate numbers on startup...
-   // MainWindow::on_pushButton_generate_clicked();
+    MainWindow::on_pushButton_generate_clicked();
 
 
 }
@@ -48,9 +48,11 @@ void MainWindow::on_pushButton_generate_clicked()
 
     numberGen->start();
 
+
+    // ui->pushButton_generate->setEnabled(false);
+
     //  This sleep will allow enough time for the thread to run so the GUI thread can update the label values...
     sleep(1);
-
     cout << " ---- " << endl;
 
     ss << numArray[0] << endl;
