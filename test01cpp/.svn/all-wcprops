@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/2/trunk/test01cpp
+END
+TestProj_01.pro
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/test01cpp/TestProj_01.pro
+END
+davey.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/2/trunk/test01cpp/davey.cpp
+END
+davey.h
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/test01cpp/davey.h
+END
+Fileinput.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/test01cpp/Fileinput.cpp
+END
+Fileinput.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/test01cpp/Fileinput.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/test01cpp/main.cpp
+END
+TestProj_01.pro.user
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/test01cpp/TestProj_01.pro.user
+END

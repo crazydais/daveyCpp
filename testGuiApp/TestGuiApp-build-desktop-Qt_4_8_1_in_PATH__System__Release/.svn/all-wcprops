@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/2/trunk/testGuiApp/TestGuiApp-build-desktop-Qt_4_8_1_in_PATH__System__Release
+END
+TestGuiApp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/2/trunk/testGuiApp/TestGuiApp-build-desktop-Qt_4_8_1_in_PATH__System__Release/TestGuiApp
+END
+moc_mainwindow.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/2/trunk/testGuiApp/TestGuiApp-build-desktop-Qt_4_8_1_in_PATH__System__Release/moc_mainwindow.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/2/trunk/testGuiApp/TestGuiApp-build-desktop-Qt_4_8_1_in_PATH__System__Release/Makefile
+END
+ui_mainwindow.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/2/trunk/testGuiApp/TestGuiApp-build-desktop-Qt_4_8_1_in_PATH__System__Release/ui_mainwindow.h
+END
+qrc_ResourceFiles.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/2/trunk/testGuiApp/TestGuiApp-build-desktop-Qt_4_8_1_in_PATH__System__Release/qrc_ResourceFiles.cpp
+END
