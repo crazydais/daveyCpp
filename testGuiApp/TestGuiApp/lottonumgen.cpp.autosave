@@ -1,0 +1,7 @@
+#include "lottonumgen.h"
+
+LottoNumGen::LottoNumGen(QObject *parent) :
+    QThread(parent)
+{
+
+}

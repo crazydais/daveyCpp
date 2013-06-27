@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include "LottoNumberGenerator.h"
+#include "Lottonumgen.h"
 
 #include <iostream>
 #include <sstream>
@@ -11,20 +11,25 @@
 
 using namespace std;
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
-    /*      Programmatically Set the Alignment of a 'label'...
-        ui->label_1->setAlignment(Qt::AlignCenter);
-    */
+    //  Create an instance of Lottonumgen and pass it the numArray by casting it as an int pointer 'int *'
+    numberGen = new LottoNumGen((int*) numArray);
+
+    //  Then we can connect our signals and slots
+    connect(numberGen, SIGNAL(updateLottoNumbersOnGui()), this, SLOT(updateLottoNumbersOnGui()));
 
     //  Call 'on_pushButton_generate_clicked()' to generate numbers on startup...
     MainWindow::on_pushButton_generate_clicked();
 
 
+
+    /*      Programmatically Set the Alignment of a 'label'...
+        ui->label_1->setAlignment(Qt::AlignCenter);
+    */
 }
 
 MainWindow::~MainWindow()
@@ -34,17 +39,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_generate_clicked()
 {
-
-    int numArray[6];
-
     for(int i = 0; i < 6; i++)
     {
         numArray[i] = 0;
     }
 
 
-    LottoNumberGenerator *numberGen = new LottoNumberGenerator((int*) numArray);
-    stringstream ss;
+
+
 
     numberGen->start();
 
@@ -52,8 +54,15 @@ void MainWindow::on_pushButton_generate_clicked()
     // ui->pushButton_generate->setEnabled(false);
 
     //  This sleep will allow enough time for the thread to run so the GUI thread can update the label values...
-    sleep(1);
+    //sleep(1);
     cout << " ---- " << endl;
+}
+
+void MainWindow::updateLottoNumbersOnGui()
+{
+    cout << "update gui..." << endl;
+
+    stringstream ss;
 
     ss << numArray[0] << endl;
     ui->label_num_01->setText(QString::fromStdString(ss.str()));
@@ -84,7 +93,6 @@ void MainWindow::on_pushButton_generate_clicked()
     ui->label_num_06->setText(QString::fromStdString(ss.str()));
     ss.str(std::string());
     ss.clear();
-
 }
 
 

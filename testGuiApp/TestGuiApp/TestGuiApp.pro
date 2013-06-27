@@ -12,10 +12,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    LottoNumberGenerator.cpp
+    Lottonumgen.cpp
 
 HEADERS  += mainwindow.h \
-    LottoNumberGenerator.h
+    Lottonumgen.h
 
 FORMS    += mainwindow.ui
 

@@ -2,8 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QtCore>
-#include "Lottonumgen.h"
+#include <iostream>
+
+#include "Signals.h"
 
 namespace Ui {
 class MainWindow;
@@ -17,16 +18,14 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     
-private slots:
-    void on_pushButton_generate_clicked();
-
-public slots:
-    void updateLottoNumbersOnGui();
-
 private:
     Ui::MainWindow *ui;
-    LottoNumGen *numberGen;
-    int numArray[6];
+    Signals *sig;
+
+public slots:
+    void on_sendASignal();
 };
+
+
 
 #endif // MAINWINDOW_H
