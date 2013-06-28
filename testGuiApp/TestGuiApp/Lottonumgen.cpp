@@ -33,8 +33,6 @@ int LottoNumGen::generateNumber(int seed)
 {
     int x = 0;
 
-    srand((unsigned)seed);
-
             //  To win the Irish lotto jackpot, you must match the first six numbers drawn (1 to 45).
             //  Will print out a random number from 0 - 45 (ie, rand()%46)
             x = rand()%46;
