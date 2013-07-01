@@ -3,11 +3,6 @@
 
 #include "Lottonumgen.h"
 
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <cstdlib>      //  rand()
-#include <ctime>        //  time()
 
 using namespace std;
 

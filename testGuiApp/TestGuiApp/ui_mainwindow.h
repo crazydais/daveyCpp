@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Thu Jun 27 21:17:49 2013
+** Created: Mon Jul 1 19:13:48 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -77,7 +77,7 @@ public:
         pushButton_generate->setGeometry(QRect(290, 260, 98, 27));
         label_image = new QLabel(centralWidget);
         label_image->setObjectName(QString::fromUtf8("label_image"));
-        label_image->setGeometry(QRect(10, 20, 381, 80));
+        label_image->setGeometry(QRect(10, 20, 381, 71));
         label_image->setPixmap(QPixmap(QString::fromUtf8(":/lottoBanner.jpg")));
         label_image->setScaledContents(true);
         label_image->setAlignment(Qt::AlignCenter);

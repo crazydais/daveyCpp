@@ -3,6 +3,10 @@
 
 #include <QThread>
 #include <QtCore>
+#include <iostream>
+#include <cstdlib>      //  rand()
+#include <ctime>        //  time()
+
 class LottoNumGen : public QThread
 {
     Q_OBJECT
@@ -18,7 +22,7 @@ public:
     //  Setter/Getters
 
     //  Function Declarations
-    int generateNumber(int);
+    int generateNumber();
     void run();     //  override QThread run() function...
 
 private:

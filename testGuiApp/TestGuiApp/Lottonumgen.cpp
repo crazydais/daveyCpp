@@ -1,5 +1,4 @@
 #include "Lottonumgen.h"
-#include <iostream>
 #include "mainwindow.h"
 
 
@@ -29,7 +28,7 @@ LottoNumGen::~LottoNumGen()
 }
 
 
-int LottoNumGen::generateNumber(int seed)
+int LottoNumGen::generateNumber()
 {
     int x = 0;
 
@@ -63,7 +62,7 @@ void LottoNumGen::run()
     for(int j = 0; j < 6; j++)
     {
         //  Assign a new random value to i by calling the function generateNumber()
-        i = this->generateNumber(rand()%1000);
+        i = this->generateNumber();
 
         if(j > 0)
         {
@@ -76,7 +75,7 @@ void LottoNumGen::run()
                 {
                     //  if it is the same, generate a new number for i and start checking from index 0 all over again...
                     cout << "caught duplicate" << endl;
-                    i = this->generateNumber(rand()%1000);
+                    i = this->generateNumber();
                     k = 0;
                 }
             }

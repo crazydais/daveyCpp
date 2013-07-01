@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include <QtCore>
+#include <iostream>
+#include <sstream>
+#include <string>
+
 #include "Lottonumgen.h"
 
 namespace Ui {
