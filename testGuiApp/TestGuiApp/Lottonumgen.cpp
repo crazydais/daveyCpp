@@ -16,10 +16,6 @@ LottoNumGen::LottoNumGen(int *numArray)
     //  Assign the local pointer 'tempArray' to be equal to the numArray. Since the address of both pointers is the same, numArray in the MainWindow class
     //  will automatically have access to all the values stored in each index of numArray.
     tempArray = numArray;
-
-    //  srand is a global function.  We will only want one instance of this. Originally, this was part of the generateNumber() function, but that was
-    //  slowing down the program.
-    srand((unsigned)time(NULL));
 }
 
 LottoNumGen::~LottoNumGen()
@@ -34,7 +30,8 @@ int LottoNumGen::generateNumber()
 
             //  To win the Irish lotto jackpot, you must match the first six numbers drawn (1 to 45).
             //  Will print out a random number from 0 - 45 (ie, rand()%46)
-            x = rand()%46;
+            //x = rand()%46;
+            x = qrand()%46;
 
             //  0 is not a valid lotto number, so it can't be used
             if(x != 0)
@@ -52,6 +49,10 @@ int LottoNumGen::generateNumber()
 
 void LottoNumGen::run()
 {
+    //  qrand() and qsrand() are Qt specific random number generators which seem to be working better than
+    //  C++ standard rand() and srand(). The standard functions were noticble slow on windows.
+    QTime time = QTime::currentTime();
+    qsrand((uint)time.msec());
 
     cout << "Thread running..." << endl;
 

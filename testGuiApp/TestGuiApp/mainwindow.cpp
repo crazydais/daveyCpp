@@ -20,8 +20,6 @@ MainWindow::MainWindow(QWidget *parent)
     //  Call 'on_pushButton_generate_clicked()' to generate numbers on startup...
     MainWindow::on_pushButton_generate_clicked();
 
-
-
     /*      Programmatically Set the Alignment of a 'label'...
         ui->label_1->setAlignment(Qt::AlignCenter);
     */
@@ -39,12 +37,7 @@ void MainWindow::on_pushButton_generate_clicked()
         numArray[i] = 0;
     }
 
-
-
-
-
     numberGen->start();
-
 
     // ui->pushButton_generate->setEnabled(false);
 
